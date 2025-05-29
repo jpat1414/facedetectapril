@@ -17,7 +17,7 @@ class FaceDetect(Node):
     def __init__(self):
         super().__init__('face_detect_node')
         self.bridge = CvBridge()
-        self.cascade_path = "/home/jenish/catkin_ws/src/vision_pkg/vision_pkg/cascade/haarcascade_frontalface_default.xml"
+        self.cascade_path = "/home/jpat/facedetectapril/script/haarcascade_frontalface_default.xml"
         self.face_cascade = cv2.CascadeClassifier(self.cascade_path)
         if self.face_cascade.empty():
             print("Error loading cascade file")
