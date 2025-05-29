@@ -1,7 +1,7 @@
 # usb_cam_params.yaml
 usb_cam:
   ros__parameters:
-    video_device: "/dev/video0"
+    video_device: "/dev/video3"
     image_width: 640
     image_height: 480
     pixel_format: "yuyv"
