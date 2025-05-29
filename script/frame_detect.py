@@ -26,7 +26,7 @@ class FaceDetect(Node):
     def receive_image(self):    
         self.subscription = self.create_subscription(
             Image,
-            '/image_raw',
+            '/usb_cam/image_raw',
             self.frame_callback,
             10
         )
