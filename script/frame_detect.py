@@ -55,9 +55,11 @@ class FaceDetect(Node):
             cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
         cv2.imshow("Face Detection", frame)
         cv2.waitKey(1)
+    def main(args=None):
+        rclpy.init(args=args)
+        node = FaceDetect()
+        node.receive_image()
 
 if __name__ == '__main__':
-    rclpy.init()
-    face_detect_node = FaceDetect()
-    face_detect_node.receive_image()
+    main()
 
